@@ -14,6 +14,7 @@ class Onboarding extends Component {
             left: [0, -373, 750],
             curnumber: 0,
             btnstyle:'',
+            scwidth:0,
         }
         this.toNext=this.toNext.bind(this);
         this.toPrev=this.toPrev.bind(this);
@@ -62,12 +63,18 @@ class Onboarding extends Component {
             </div>,
         }]
     }
+
     componentDidMount(){
 
         let scwrapper=document.getElementsByClassName("screenwrapper")[0];
         setTimeout(function(){
             scwrapper.style.opacity=1;
         },1);
+
+        let scwidth=document.getElementsByClassName("phone")[0];
+        scwidth=scwidth.offsetWidth;
+        this.state.scwidth=scwidth;
+        this.state.left=[0, (-1 * scwidth)+ 2, scwidth*2]
        
     }
     toNext() {
@@ -75,7 +82,7 @@ class Onboarding extends Component {
         let curnumber=this.state.curnumber;
         //move card and yellow blob to left
         if (curnumber < 3) {
-            this.setState({curnumber: (this.state.curnumber + 1), left: [this.state.left[0]-375,this.state.left[1]-375,this.state.left[2]-375]});
+            this.setState({curnumber: (this.state.curnumber + 1), left: [this.state.left[0]-this.state.scwidth,this.state.left[1]-this.state.scwidth,this.state.left[2]-this.state.scwidth]});
             //make the right dot as grey(active)
             curnumber += 1 ;
 
@@ -98,7 +105,7 @@ class Onboarding extends Component {
         let curnumber=this.state.curnumber;
         //move card and yellow blob to right
         if (curnumber > 0) {
-            this.setState({curnumber:this.state.curnumber -1, left: [this.state.left[0]+375, this.state.left[1]+375, this.state.left[2]+375]});
+            this.setState({curnumber:this.state.curnumber -1, left: [this.state.left[0]+this.state.scwidth, this.state.left[1]+this.state.scwidth, this.state.left[2]+this.state.scwidth]});
             curnumber -= 1;
             //make the right dot as grey(active)
             nav_dot[curnumber+1].classList.remove('active');

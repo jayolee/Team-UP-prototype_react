@@ -146,12 +146,10 @@ class App extends Component {
   render() {
 
     return (
-      <div className="bg">
         <div className="phone">
           {this.pagerender()}
         
         </div>
-      </div>
     );
   }
 }

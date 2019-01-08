@@ -9,7 +9,8 @@ class Timer extends Component {
             time: 0,
             dotstyle: {
                 transform: 0,
-            }
+            },
+            ontouch: 0,
         }
     }
     componentDidMount(){
@@ -34,6 +35,11 @@ class Timer extends Component {
 
             let posX = e.clientX;
             let posY = e.clientY;
+            if(this.state.ontouch){
+                posX=e.touches[0].clientX;
+                posY=e.touches[0].clientY;
+                console.log("touches")
+            }
             let x = 0;
             let y = 0;
             //first, fourth quadrants
@@ -85,6 +91,8 @@ class Timer extends Component {
 
 
         }
+
+       
         document.addEventListener("mousemove", mousemoveFunc);
         document.addEventListener("mouseup", e => {
             document.removeEventListener("mousemove", mousemoveFunc);
@@ -93,12 +101,14 @@ class Timer extends Component {
 
     }
 
-
+    timerforTouch(){
+        this.state.ontouch=true;
+    }
     render() {
         return (
             <div>
                 <div className="time_control" key="knobbox" style={this.state.dotstyle}>
-                    <div className="dots" id="knob" key="knob" onMouseDown={this.timercontrol.bind(this)} />
+                    <div className="dots" id="knob" key="knob" onMouseDown={this.timercontrol.bind(this)} onTouchStart={this.timerforTouch.bind(this)} onTouchMove={(ev)=> {if(this.state.ontouch){this.timercontrol.bind(this)}}} onTouchEnd={(ev) => this.state.ontouch=false}/>
                 </div>
                 <div id="settime" key="settime">{this.state.time}0:00</div>
                 <div className="time" />
