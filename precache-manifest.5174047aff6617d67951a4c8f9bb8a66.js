@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/Team-UP-prototype_react/static/media/yellow-blob.9faa0785.svg"
   },
   {
-    "revision": "9a40596a146763a5ac3d",
-    "url": "/Team-UP-prototype_react/static/css/main.e625aa69.chunk.css"
+    "revision": "10089ae771c74179e57e",
+    "url": "/Team-UP-prototype_react/static/css/main.571fa12e.chunk.css"
   },
   {
     "revision": "e7821216da33c7c857f7",
@@ -48,8 +48,8 @@ self.__precacheManifest = [
     "url": "/Team-UP-prototype_react/static/media/report_week.7cdb839e.svg"
   },
   {
-    "revision": "9a40596a146763a5ac3d",
-    "url": "/Team-UP-prototype_react/static/js/main.9a40596a.chunk.js"
+    "revision": "10089ae771c74179e57e",
+    "url": "/Team-UP-prototype_react/static/js/main.10089ae7.chunk.js"
   },
   {
     "revision": "a4f889311943ab56835de890a4cf3cb8",
@@ -96,7 +96,7 @@ self.__precacheManifest = [
     "url": "/Team-UP-prototype_react/static/media/report_year.ed7bcece.svg"
   },
   {
-    "revision": "03ae8b0594a74a319eb513a663cd27a1",
+    "revision": "8ff7ce03c41dc3e0c34526c08c17c9a5",
     "url": "/Team-UP-prototype_react/index.html"
   }
 ];

@@ -1,7 +1,7 @@
 {
-  "main.css": "/Team-UP-prototype_react/static/css/main.e625aa69.chunk.css",
-  "main.js": "/Team-UP-prototype_react/static/js/main.9a40596a.chunk.js",
-  "main.js.map": "/Team-UP-prototype_react/static/js/main.9a40596a.chunk.js.map",
+  "main.css": "/Team-UP-prototype_react/static/css/main.571fa12e.chunk.css",
+  "main.js": "/Team-UP-prototype_react/static/js/main.10089ae7.chunk.js",
+  "main.js.map": "/Team-UP-prototype_react/static/js/main.10089ae7.chunk.js.map",
   "static/js/1.e7821216.chunk.js": "/Team-UP-prototype_react/static/js/1.e7821216.chunk.js",
   "static/js/1.e7821216.chunk.js.map": "/Team-UP-prototype_react/static/js/1.e7821216.chunk.js.map",
   "runtime~main.js": "/Team-UP-prototype_react/static/js/runtime~main.f79c5bfb.js",
@@ -26,8 +26,8 @@
   "static/media/report_day.svg": "/Team-UP-prototype_react/static/media/report_day.ddcb87f3.svg",
   "static/media/report_month.svg": "/Team-UP-prototype_react/static/media/report_month.61ce5a52.svg",
   "static/media/report_year.svg": "/Team-UP-prototype_react/static/media/report_year.ed7bcece.svg",
-  "static/css/main.e625aa69.chunk.css.map": "/Team-UP-prototype_react/static/css/main.e625aa69.chunk.css.map",
+  "static/css/main.571fa12e.chunk.css.map": "/Team-UP-prototype_react/static/css/main.571fa12e.chunk.css.map",
   "index.html": "/Team-UP-prototype_react/index.html",
-  "precache-manifest.bdbe9d43d7747118296f1eaa6a51540f.js": "/Team-UP-prototype_react/precache-manifest.bdbe9d43d7747118296f1eaa6a51540f.js",
+  "precache-manifest.5174047aff6617d67951a4c8f9bb8a66.js": "/Team-UP-prototype_react/precache-manifest.5174047aff6617d67951a4c8f9bb8a66.js",
   "service-worker.js": "/Team-UP-prototype_react/service-worker.js"
 }
