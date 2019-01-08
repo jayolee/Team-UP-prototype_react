@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/Team-UP-prototype_react/precache-manifest.5174047aff6617d67951a4c8f9bb8a66.js"
+  "/Team-UP-prototype_react/precache-manifest.cb07195e70501b0035d0865a3b9f3c68.js"
 );
 
 workbox.clientsClaim();
