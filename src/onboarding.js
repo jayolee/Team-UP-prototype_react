@@ -73,8 +73,7 @@ class Onboarding extends Component {
 
         let scwidth=document.getElementsByClassName("phone")[0];
         scwidth=scwidth.offsetWidth;
-        this.state.scwidth=scwidth;
-        this.state.left=[0, (-1 * scwidth)+ 2, scwidth*2]
+        this.setState({scwidth: scwidth, left: [0, (-1 * scwidth)+ 2, scwidth*2]})
        
     }
     toNext() {

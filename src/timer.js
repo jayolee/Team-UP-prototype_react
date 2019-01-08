@@ -22,7 +22,6 @@ class Timer extends Component {
        
     }
     timercontrol(e) {
-
         const mousemoveFunc = e => {
             let win = (window.innerWidth) / 2;
             let screentop = 160;
@@ -35,10 +34,10 @@ class Timer extends Component {
 
             let posX = e.clientX;
             let posY = e.clientY;
-            if(this.state.ontouch){
+           
+            if(e.touches !== undefined){
                 posX=e.touches[0].clientX;
                 posY=e.touches[0].clientY;
-                console.log("touches")
             }
             let x = 0;
             let y = 0;
@@ -97,18 +96,19 @@ class Timer extends Component {
         document.addEventListener("mouseup", e => {
             document.removeEventListener("mousemove", mousemoveFunc);
         })
+        document.addEventListener("touchmove", mousemoveFunc);
+        document.addEventListener("touchend", e => {
+            document.removeEventListener("touchmove", mousemoveFunc);
+        })
 
 
     }
 
-    timerforTouch(){
-        this.state.ontouch=true;
-    }
     render() {
         return (
             <div>
                 <div className="time_control" key="knobbox" style={this.state.dotstyle}>
-                    <div className="dots" id="knob" key="knob" onMouseDown={this.timercontrol.bind(this)} onTouchStart={this.timerforTouch.bind(this)} onTouchMove={(ev)=> {if(this.state.ontouch){this.timercontrol.bind(this)}}} onTouchEnd={(ev) => this.state.ontouch=false}/>
+                    <div className="dots" id="knob" key="knob" onMouseDown={this.timercontrol.bind(this)} onTouchMove={this.timercontrol.bind(this)} />
                 </div>
                 <div id="settime" key="settime">{this.state.time}0:00</div>
                 <div className="time" />

@@ -24,6 +24,7 @@ class Report extends Component {
             },
             timeop:1,
             timeimg: report_week,
+            day: "This Week",
             total:<span>Total <span className="bold">11.5</span> hr</span>,
         }
         this.timeinfo={
@@ -82,7 +83,7 @@ class Report extends Component {
                 datepicker.classList.remove("active")
             }
         }
-        this.setState({total: this.timeinfo[curid][1], timeimg: this.timeinfo[curid][0]});
+        this.setState({total: this.timeinfo[curid][1], timeimg: this.timeinfo[curid][0], day:this.timeinfo[curid][2]});
     }
     render() {
         return (
@@ -115,7 +116,7 @@ class Report extends Component {
                                 <path d="M12 0 L6 6 L12 12" fill="none" strokeWidth="3" />
                             </svg>
                         </div>
-                        <div className="week">This Week</div>
+                        <div className="week" key="dayinfo">{this.state.day}</div>
                     </div>
                     <div className="reportcard"><img alt="report background" src={reportbg} />
                         <img id="reporttype" alt="report" src={this.state.timeimg} key="reporttype" /></div>
